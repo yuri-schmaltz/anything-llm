@@ -1,0 +1,18 @@
+# Build artefacts
+build/
+CMakeFiles/
+CMakeCache.txt
+*.user
+*.pro.user
+Makefile
+*.obj
+*.o
+*.pdb
+*.ilk
+*.ninja
+*.qrc.depends
+compile_commands.json
+*.dll
+*.exe
+*.app
+*.dSYM
