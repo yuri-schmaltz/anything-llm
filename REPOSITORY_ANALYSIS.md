@@ -3,6 +3,7 @@
 ## 1. Repository Structure
 - **Monorepo layout:** The project hosts a Vite + React `frontend`, an Express-based `server`, and a document processing `collector`, each managed through Yarn scripts in the root `package.json`. Docker, cloud deployment templates, and submodules for web embeds and browser extensions round out the top-level directories.
 - **Supporting assets:** Deployment guidance (`docker/`, `cloud-deployments/`, `BARE_METAL.md`), security and contribution guidelines, and localization assets underpin the core application components.
+- **Desktop distribution tooling:** `extras/qt-installer/` now ships a Qt 6 graphical installer with upgrade detection, cross-platform shortcut creation, and payload packaging instructions for distributing the desktop build.
 
 ## 2. Integration & Build Tooling
 - **Root orchestration:** Root scripts coordinate setup across packages (dependency installation, Prisma setup, environment file initialization) and provide linting, development, and production commands.

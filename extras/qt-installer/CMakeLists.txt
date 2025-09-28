@@ -28,7 +28,7 @@ qt_add_executable(anything-llm-installer
 )
 
 if (NOT DEFINED APP_VERSION)
-    set(APP_VERSION "1.9.0")
+    set(APP_VERSION "1.9.1")
 endif()
 
 target_compile_definitions(anything-llm-installer PRIVATE APP_VERSION="${APP_VERSION}")

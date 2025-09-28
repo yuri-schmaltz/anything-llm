@@ -166,6 +166,23 @@ Mintplex Labs & the community maintain a number of deployment methods, scripts, 
 
 [or set up a production AnythingLLM instance without Docker →](./BARE_METAL.md)
 
+### Desktop installer (Qt 6)
+
+Need a guided desktop experience? The repository now ships with a cross-platform Qt 6 installer under [`extras/qt-installer/`](./extras/qt-installer). It provides smart version detection, desktop/menu shortcuts, and keeps installation metadata in `installer-state.json` so future runs can repair or upgrade an existing setup.
+
+#### Building the installer
+
+1. Produce the application payload you want to distribute (for example by running the usual Docker or bare-metal build and copying the resulting bundle).
+2. Place the release artifacts inside `extras/qt-installer/payload/`, mirroring the final directory structure that should be installed on end-user machines.
+3. Configure and build the installer binary:
+
+   ```bash
+   cmake -S extras/qt-installer -B extras/qt-installer/build -DAPP_VERSION="$(node -p "require('./server/package.json').version")"
+   cmake --build extras/qt-installer/build --target anything-llm-installer
+   ```
+
+The resulting executable in `extras/qt-installer/build/` can be shipped directly to end users. See the [installer README](./extras/qt-installer/README.md) for deeper customization notes (shortcut handling per platform, payload validation, etc.).
+
 ## How to setup for development
 
 - `yarn setup` To fill in the required `.env` files you'll need in each of the application sections (from root of repo).
@@ -173,6 +190,8 @@ Mintplex Labs & the community maintain a number of deployment methods, scripts, 
 - `yarn dev:server` To boot the server locally (from root of repo).
 - `yarn dev:frontend` To boot the frontend locally (from root of repo).
 - `yarn dev:collector` To then run the document collector (from root of repo).
+
+If you are orienting yourself around the monorepo for the first time, start with the [Repository Analysis](./REPOSITORY_ANALYSIS.md) for a birds-eye overview of each package and supporting asset.
 
 [Learn about documents](./server/storage/documents/DOCUMENTS.md)
 
