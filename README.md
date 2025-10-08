@@ -185,13 +185,14 @@ The resulting executable in `extras/qt-installer/build/` can be shipped directly
 
 ## How to setup for development
 
-- `yarn setup` To fill in the required `.env` files you'll need in each of the application sections (from root of repo).
-  - Go fill those out before proceeding. Ensure `server/.env.development` is filled or else things won't work right.
-- `yarn dev:server` To boot the server locally (from root of repo).
-- `yarn dev:frontend` To boot the frontend locally (from root of repo).
-- `yarn dev:collector` To then run the document collector (from root of repo).
+1. `yarn doctor` – confirm that your Node.js and Yarn versions satisfy the minimum requirements.
+2. `yarn setup` – install dependencies, copy the `.env` templates (without overwriting existing files), and run Prisma generate/migrate/seed. Fill out `server/.env.development` before starting the services.
+3. Start the stack with `yarn dev:all` (shared logs) or launch services individually via `yarn dev:server`, `yarn dev:frontend`, and `yarn dev:collector`.
 
-If you are orienting yourself around the monorepo for the first time, start with the [Repository Analysis](./REPOSITORY_ANALYSIS.md) for a birds-eye overview of each package and supporting asset.
+Explore the following resources when ramping up:
+
+- [Repository Analysis](./REPOSITORY_ANALYSIS.md) for a birds-eye overview of each package and supporting asset.
+- [Architecture](./docs/ARCHITECTURE.md), [Configuration](./docs/CONFIGURATION.md), and [Development Workflow](./docs/DEVELOPMENT_WORKFLOW.md) for deeper guidance on how the system fits together.
 
 [Learn about documents](./server/storage/documents/DOCUMENTS.md)
 
