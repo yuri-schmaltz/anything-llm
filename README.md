@@ -192,7 +192,7 @@ The resulting executable in `extras/qt-installer/build/` can be shipped directly
 Explore the following resources when ramping up:
 
 - [Repository Analysis](./REPOSITORY_ANALYSIS.md) for a birds-eye overview of each package and supporting asset.
-- [Architecture](./docs/ARCHITECTURE.md), [Configuration](./docs/CONFIGURATION.md), and [Development Workflow](./docs/DEVELOPMENT_WORKFLOW.md) for deeper guidance on how the system fits together.
+- [Architecture](./docs/ARCHITECTURE.md), [Configuration](./docs/CONFIGURATION.md), [Development Workflow](./docs/DEVELOPMENT_WORKFLOW.md), and [Scripts & Automation](./docs/SCRIPTS_AND_AUTOMATION.md) for deeper guidance on how the system fits together.
 
 [Learn about documents](./server/storage/documents/DOCUMENTS.md)
 

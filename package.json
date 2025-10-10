@@ -14,6 +14,7 @@
     "lint": "node ./scripts/manage.mjs lint",
     "setup": "node ./scripts/manage.mjs setup",
     "setup:envs": "node ./scripts/manage.mjs setup:envs",
+    "install:packages": "node ./scripts/manage.mjs install",
     "dev:server": "node ./scripts/manage.mjs dev:server",
     "dev:collector": "node ./scripts/manage.mjs dev:collector",
     "dev:frontend": "node ./scripts/manage.mjs dev:frontend",
@@ -26,10 +27,11 @@
     "prod:server": "node ./scripts/manage.mjs prod:server",
     "prod:frontend": "node ./scripts/manage.mjs prod:frontend",
     "generate:cloudformation": "node cloud-deployments/aws/cloudformation/generate.mjs",
-    "generate::gcp_deployment": "node cloud-deployments/gcp/deployment/generate.mjs",
-    "verify:translations": "node ./scripts/manage.mjs verify:translations",
+    "generate:gcp-deployment": "node cloud-deployments/gcp/deployment/generate.mjs",
+    "verify:translations": "node ./scripts/manage.mjs translations:verify",
+    "normalize:translations": "node ./scripts/manage.mjs translations:normalize",
     "doctor": "node ./scripts/manage.mjs doctor",
-    "normalize:translations": "cd frontend/src/locales && node normalizeEn.mjs && cd ../../.. && yarn lint && yarn verify:translations"
+    "clean": "node ./scripts/manage.mjs clean:node_modules"
   },
   "private": false,
   "devDependencies": {
