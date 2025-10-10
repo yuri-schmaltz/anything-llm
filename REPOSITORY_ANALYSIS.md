@@ -22,5 +22,5 @@
 1. Add architectural diagrams or sequence illustrations for the frontend/server/collector workflow to clarify runtime orchestration.
 2. Expand documentation inside each package (e.g., `frontend/README`, `server/README`) summarizing responsibilities, key dependencies, and local scripts.
 3. Introduce a central configuration reference covering environment variables, deployment presets, and integration toggles to reduce reliance on external docs.
-4. Annotate complex scripts (setup, Prisma tooling) with inline comments or dedicated docs to aid future modifications.
+4. Annotate complex scripts (setup, Prisma tooling) with inline comments or dedicated docs to aid future modifications. ✅ Addressed via `docs/SCRIPTS_AND_AUTOMATION.md` and refactored `scripts/manage.mjs` helpers.
 

@@ -32,6 +32,14 @@ Need to skip Prisma when working offline? Use:
 yarn setup --skip-prisma
 ```
 
+Only need dependencies? Run:
+
+```bash
+yarn install:packages
+```
+
+Add `--force` to reinstall even when `node_modules` already exists.
+
 ## 3. Running the stack locally
 
 Choose the approach that fits your preference:
@@ -94,13 +102,14 @@ Normalise English strings and verify locale completeness with:
 yarn normalize:translations
 ```
 
-This runs the existing localisation utilities and then calls `yarn verify:translations` to ensure every locale has matching keys.
+This runs the localisation utilities, triggers the verification script, and lints the workspaces. Pass `--no-lint` to skip the lint step during rapid iteration.
 
 ## 8. Useful tips
 
 - Use `yarn doctor` whenever switching machines to confirm your environment is ready.
+- `yarn clean` removes `node_modules` folders if you need a clean slate before reinstalling dependencies.
 - `server/nodemon.json` and `collector/nodemon.json` watch the appropriate directories—feel free to extend them when adding new folders.
 - Swagger docs can be regenerated via `yarn --cwd server swagger` to reflect endpoint changes.
-- Deployment templates are generated with `yarn generate:cloudformation` and `yarn generate::gcp_deployment`.
+- Deployment templates are generated with `yarn generate:cloudformation` and `yarn generate:gcp-deployment`.
 
-Refer back to [`docs/ARCHITECTURE.md`](./ARCHITECTURE.md) for an overview of how the pieces fit together and [`docs/CONFIGURATION.md`](./CONFIGURATION.md) when modifying environment variables.
+Refer back to [`docs/ARCHITECTURE.md`](./ARCHITECTURE.md) for an overview of how the pieces fit together, [`docs/CONFIGURATION.md`](./CONFIGURATION.md) when modifying environment variables, and [`docs/SCRIPTS_AND_AUTOMATION.md`](./SCRIPTS_AND_AUTOMATION.md) for a quick reference of available commands.

@@ -29,7 +29,7 @@ The dev server runs on `http://localhost:3000` by default and proxies API reques
 ## Working with translations
 
 1. Edit English strings in `src/locales/en.json`.
-2. Run `yarn normalize:translations` from the repository root to regenerate sorted keys and validate other locales.
+2. Run `yarn normalize:translations` from the repository root to regenerate sorted keys, validate other locales, and run the lint suite (use `--no-lint` to skip linting).
 3. Update locale-specific README files under `locales/` if guidance changes.
 
 ## Adding new features
